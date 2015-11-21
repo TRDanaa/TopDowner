@@ -17,6 +17,10 @@ float forwardAmount;
 float turnAmount;
 
 
+
+
+
+
 void Start(){
 
 	rigidBody = GetComponent<Rigidbody>();
@@ -106,6 +110,7 @@ void Move(Vector3 move)
 	
 	}
 	}
+	
 
 
 
