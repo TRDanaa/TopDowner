@@ -30,7 +30,9 @@ void Start(){
 	
 }
 
-void Update(){
+
+
+    void Update(){
 	
 		
 	
@@ -43,16 +45,18 @@ void Update(){
 	Vector3 lookDir = lookPos - transform.position;
 	lookDir.y = 0;
 	transform.LookAt(transform.position + lookDir, Vector3.up);
-	
-	}
+
+
+    }
 	
 
 void FixedUpdate(){
 
-	float horizontal = Input.GetAxis("Horizontal");
+    float horizontal = Input.GetAxis("Horizontal");
 	float vertical = Input.GetAxis("Vertical");
+
 	
-	if(cam != null)
+	if (cam != null)
 	{
 		camForward = Vector3.Scale(cam.up,new Vector3(1,0,1)).normalized;
 		
@@ -80,36 +84,36 @@ void FixedUpdate(){
 
 }
 
-void Move(Vector3 move)
-{
-	if(move.magnitude>1)
-	{
-	move.Normalize();
+    void Move(Vector3 move)
+    {
+	    if(move.magnitude>1)
+	    {
+	    move.Normalize();
 
-	}
+	    }
 	
-	this.moveInput = move;
+	    this.moveInput = move;
 
-	ConvertMoveInput();
-	UpdateAnimator();
+	    ConvertMoveInput();
+	    UpdateAnimator();
+    }
+
+    void ConvertMoveInput(){
+	
+	    Vector3 localMove = transform.InverseTransformDirection(moveInput);
+	    turnAmount = localMove.x;
+		
+	    forwardAmount = localMove.z;
+	
+    }
+    void UpdateAnimator(){
+	
+	    anim.SetFloat ("Forward", forwardAmount, 0.1f, Time.deltaTime);
+	    anim.SetFloat ("Turn", turnAmount, 0.1f, Time.deltaTime);
+    }
+
+    
 }
-
-	void ConvertMoveInput(){
-	
-		Vector3 localMove = transform.InverseTransformDirection(moveInput);
-		turnAmount = localMove.x;
-		
-		forwardAmount = localMove.z;
-	
-	}
-	void UpdateAnimator(){
-	
-		anim.SetFloat ("Forward", forwardAmount, 0.1f, Time.deltaTime);
-		anim.SetFloat ("Turn", turnAmount, 0.1f, Time.deltaTime);
-		
-	
-	}
-	}
 	
 
 
