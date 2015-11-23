@@ -12,6 +12,7 @@ Transform cam;
 Vector3 camForward;
 Vector3 move;
 Vector3 moveInput;
+bool air;
 
 float forwardAmount;
 float turnAmount;
@@ -46,6 +47,7 @@ void Start(){
 	lookDir.y = 0;
 	transform.LookAt(transform.position + lookDir, Vector3.up);
 
+        air = CharacterJump.air;
 
     }
 	
@@ -72,12 +74,15 @@ void FixedUpdate(){
 	{
 		move.Normalize();
 	}
+
+        if (air == false)
+        {
+            Move(move);
+            Vector3 movement = new Vector3(horizontal, 0, vertical);
+            rigidBody.AddForce(movement * speed / Time.deltaTime);
+        }
 		
-	Move(move);	
-		
-	Vector3 movement = new Vector3(horizontal,0,vertical);
 	
-	rigidBody.AddForce(movement * speed / Time.deltaTime);
 	
 	
 	

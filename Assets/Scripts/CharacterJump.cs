@@ -9,7 +9,7 @@ public class CharacterJump : MonoBehaviour {
     public float jumpForce = 10000.0f;
     bool jump;
     bool jumpAnim;
-    bool air;
+    static public bool air;
     bool land;
 
 
