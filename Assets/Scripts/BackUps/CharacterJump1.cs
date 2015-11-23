@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 public class CharacterJump : MonoBehaviour {
@@ -11,7 +11,7 @@ public class CharacterJump : MonoBehaviour {
     bool jumpAnim;
     static public bool air;
     bool land;
-    public float gravity = 9.82f;
+
 
     void Start ()
     {
@@ -22,8 +22,6 @@ public class CharacterJump : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-    	
-    	
         jump = Input.GetButton("Jump");
 
         if (air == true)
@@ -38,10 +36,10 @@ public class CharacterJump : MonoBehaviour {
         anim.SetBool("Air", air);
         anim.SetBool("Land", land);
 
-		if (air == true)
-		{
-			transform.Translate(Vector3.down * gravity * Time.smoothDeltaTime);
-			}
+        if (air == true)
+        {
+            rigidBody.AddForce(0, -300.0f*Time.deltaTime, 0);
+        }
     }
 
     void OnTriggerStay(Collider other)
@@ -80,4 +78,4 @@ public class CharacterJump : MonoBehaviour {
         rigidBody.AddForce(0, jumpForce * Time.deltaTime, 0);
     }
 }
-
+*/
