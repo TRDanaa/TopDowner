@@ -774,7 +774,7 @@
  <HintPath>D:/Unity 5/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="PlayMaker">
- <HintPath>F:/TRD/Unity Projects/TopDowner/Assets/Plugins/PlayMaker/PlayMaker.dll</HintPath>
+ <HintPath>C:/OmaProjekti/TopDowner/TopDowner/Assets/Plugins/PlayMaker/PlayMaker.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>D:/Unity 5/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
