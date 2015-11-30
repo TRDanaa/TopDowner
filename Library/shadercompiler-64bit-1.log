@@ -1,5 +1,5 @@
-Base path: F:/Program Files/Unity 5/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-8012
+Base path: D:/Unity 5/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-6652
 Cmd: getPlatforms
 Cmd: preprocess
   insize=8687 outsize=2135 ok=1
@@ -149,7 +149,3 @@ Cmd: preprocess
   insize=698 outsize=312 ok=1
 Cmd: preprocess
   insize=5240 outsize=920 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=13030 outsize=11268 kw=_SUNDISK_SIMPLE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=13030 outsize=1859 kw=_SUNDISK_SIMPLE pd= ok=1
